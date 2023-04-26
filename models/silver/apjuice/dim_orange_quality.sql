@@ -11,7 +11,5 @@ select
     type,
     enzymes,
     sulphates,
-    total_sulfur_dioxide,
-    1 / pow(10, ph) as h_concentration,
-    log(citric_acid / residual_sugar) as acidity_ratio
+    total_sulfur_dioxide
 from {{ source("apjuice", "orange_quality") }}
