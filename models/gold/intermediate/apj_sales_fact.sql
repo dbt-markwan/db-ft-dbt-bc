@@ -1,7 +1,3 @@
-{{ config(
-  enabled=false
-) }}
-
 With customers as (
 
     select * from {{ ref('dim_customers') }}

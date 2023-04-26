@@ -24,6 +24,7 @@ all_records as (
   from
     itemised_records
 )
+
 select
   *
 from

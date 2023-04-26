@@ -1,6 +1,6 @@
-with orange_quality as (
+with orange_quality_feature as (
     select
-        pk,
+        distinct 
         quality,
         ph,
         residual_sugar,
@@ -13,12 +13,14 @@ with orange_quality as (
         type,
         enzymes,
         sulphates,
-        total_sulfur_dioxide
+        total_sulfur_dioxide,
+        1 / pow(10, ph) as h_concentration,
+        log(citric_acid / residual_sugar) as acidity_ratio
     from 
-        {{ source("apjuice", "orange_quality") }}
+        {{ ref('dim_orange_quality') }}
 )
 
 select 
     *
 from
-    orange_quality
+    orange_quality_feature

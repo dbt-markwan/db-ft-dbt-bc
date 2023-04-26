@@ -38,6 +38,7 @@ models:
     
     gold:
       +tags: gold
+      enabled: false
     silver:
       +tags: silver
 
