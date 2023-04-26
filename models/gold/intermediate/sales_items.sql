@@ -25,7 +25,6 @@ all_records as (
     itemised_records
 )
 select
-  *,
-  sha2(concat_ws(*, '||'), 256) as row_hash
+  *
 from
   all_records

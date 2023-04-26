@@ -1,4 +1,5 @@
 select
+    distinct 
     quality,
     ph,
     residual_sugar,
