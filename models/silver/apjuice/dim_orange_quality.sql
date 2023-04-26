@@ -1,4 +1,5 @@
 select
+    pk,
     quality,
     ph,
     residual_sugar,
