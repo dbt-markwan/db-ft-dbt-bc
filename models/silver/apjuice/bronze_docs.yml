@@ -24,3 +24,4 @@ sources:
             - name: id
               tests:
                 - not_null
+        - name: orange_quality

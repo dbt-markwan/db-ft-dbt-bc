@@ -10,3 +10,5 @@ models:
           tests:
             - not_null
             - unique
+    - name: orange_quality_feature
+      description: concentration and acidity ratio details of oranges
