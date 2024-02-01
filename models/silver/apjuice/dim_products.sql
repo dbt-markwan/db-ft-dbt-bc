@@ -3,9 +3,7 @@ with products as (
         pk,
         id,
         ingredients,
-        name as product_name,
-        _fivetran_deleted,
-        _fivetran_synced
+        name as product_name
     from 
         {{ source('apjuice', 'products') }}
 )
