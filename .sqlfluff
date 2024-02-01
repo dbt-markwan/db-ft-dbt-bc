@@ -11,10 +11,17 @@ tab_space_size = 4
 
 [sqlfluff:layout:type:comma]
 spacing_before = touch
+<<<<<<< HEAD
 line_position = leading
 
 [sqlfluff:rules:capitalisation.keywords] 
 capitalisation_policy = upper
+=======
+line_position = trailing
+
+[sqlfluff:rules:capitalisation.keywords] 
+capitalisation_policy = lower
+>>>>>>> 2c40b3f3c1f408fb12d566904f359a69fe280d50
 
 [sqlfluff:rules:aliasing.table]
 aliasing = explicit
