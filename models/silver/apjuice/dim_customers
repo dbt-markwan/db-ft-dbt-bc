@@ -1,0 +1,16 @@
+with customers as (
+    select 
+        id ,
+        pk,
+        store_id,
+        name,
+        email,
+        store_id || "-" || cast(id as string) as unique_id
+    from {{ source('apjuice', 'users') }}
+)
+
+
+select
+    *
+from
+    customers
