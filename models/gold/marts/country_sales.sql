@@ -14,7 +14,7 @@ final as(
         sum(product_cost) as total_sales, 
         count(distinct sale_id) as number_of_sales
     from sales_items 
-    join dim_locations l on sales_items.store_id = dim_locations.id
+    join dim_locations l on sales_items.store_id = l.id
     join sales on sales_items.sale_id = sales.id
     group by l.country_code, date_format(sales.ts, 'yyyy-MM')
 )
